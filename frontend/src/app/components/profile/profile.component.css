@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0
+}
+.card {
+  width: 350px;
+  border: none;
+  background-color: #2b2d30;
+  color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+.btn {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.username {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.number {
+  font-size: 22px;
+  font-weight: bold
+}
+
+.elo {
+  font-size: 12px;
+  font-weight: 500;
+  color: #666666;
+}
+
+.mat-elevation-z8{
+  min-width: 350px;
+  margin-top: 20px;
+  border-radius: 4px;
+
+}
+.toLobby{
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+  background-color: #2b2d30;
+}
+
+.friends{
+
+}
+
+.clubs{
+
+}
+
+.mat-elevation-z8{
+  background-color: #3b3d41;
+  color: #ffffff;
+}
+
+.lobby-button {
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  width: fit-content;
+  margin-left: 154px;
+  margin-bottom: -10px;
+}
+
+.friend-lobby-button {
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  width: fit-content;
+  margin-top: 10px;
+  margin-left: 286px;
+}
+
+.history{
+  justify-content: space-evenly;
+  color: #ffffff;
+  background-color: #3b3d41;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.history td {
+    border-radius: 6px;
+    border: 3px solid #3b3d41;
+}
+
+.setProfilepic{
+  color: #ffffff;
+  background-color: #3b3d41;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 10px;
+  width: fit-content;
+}
+
+.profilePicForm{
+  color: #ffffff;
+  background-color: #2b2d30;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Modal */
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b2d30;
+    color: #ffffff;
+}
+
+.modal-header-left{
+  margin-left: 15px;
+}
+
+.modal-header-left,
+.modal-header-center,
+.modal-header-right {
+    flex: 1;
+    text-align: center;
+}
+
+.modal-header-right{
+    margin-right: 15px;
+}
+
+.modal-content {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    background-color: #2b2d30;
+    color: #ffffff;
+}
+
+.user-info,
+.vs-info,
+.enemy-info {
+    text-align: center;
+}
+
+.modal-back-button{
+    margin-left: 45px;
+}
+
+
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 15px;
+}
+
+.date-info{
+    flex: 1;
+    text-align: right;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.modal-footer {
+    display: flex;
+}
+
+.modal-back-button,
+.repeat,
+.export-button {
+  width: fit-content;
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.modal-back-button {
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+.repeat,
+.export-button {
+  margin-left: 5px;
+}
+
+.repeat mat-icon,
+.export-button mat-icon {
+  margin: 0; /* Fixt, dass die Icons nicht zu weit links sind */
+}
+
+/* Hover */
+
+.history:hover {
+  cursor: pointer;
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.lobby-button:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.friend-lobby-button:hover {
+    background-color: #eeeeee;
+    color: #0FB27C;
+}
+
+.setProfilepic:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.modal-back-button:hover {
+    background-color: #eeeeee;
+    color: #0FB27C;
+}
+
+.repeat:hover {
+    background-color: #eeeeee;
+    color: #0FB27C;
+}
+
+.export-button:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.anerkennung{
+  margin-left: 95px;
+  animation: rainbow 4s infinite;
+}
+@keyframes rainbow {
+  0% { color: violet; }
+  16.66% { color: indigo; }
+  33.33% { color: blue; }
+  50% { color: green; }
+  66.66% { color: yellow; }
+  83.33% { color: orange; }
+  100% { color: red; }
+}
+
+
+
+
+
+
+
+
+

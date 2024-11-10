@@ -1,0 +1,16 @@
+version: "3"
+services:
+  angular:
+    container_name: angular
+    build: ./frontend
+    depends_on:
+      - "spring-boot"
+    ports:
+      - "80:80"
+
+  spring-boot:
+    image: sep_backend
+    container_name: spring-boot
+    build: ./backend
+    ports:
+      - "8080:8080"

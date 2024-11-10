@@ -1,0 +1,35 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "firstname": "yasir",
+      "lastname": "yas",
+      "email": "admin@yasir.com",
+      "password": "Yasir@1234"
+    },
+    {
+      "id": "hahaha",
+      "firstname": "dnaojnda",
+      "lastname": "onfofnso",
+      "password": "Yasir@1234",
+      "email": "yasir@in.com"
+    },
+    {
+      "id": "yasya",
+      "firstname": "yas",
+      "lastname": "yas",
+      "birthday": "2023-11-09T23:00:00.000Z",
+      "password": "shite",
+      "email": "yass@in.com",
+      "profilepicture": ""
+    },
+    {
+      "id": "test29",
+      "firstname": "yasir",
+      "lastname": "tanis",
+      "birthday": "2023-11-09T23:00:00.000Z",
+      "password": "Yasir190329",
+      "email": "test29@gmail.com"
+    }
+  ]
+}

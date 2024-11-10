@@ -1,0 +1,7 @@
+<div class="outer">
+{{isFlipped ? whiteplayer : blackplayer}} {{isFlipped ? whitetimer : blacktimer }}
+<div id="board" style="width: 500px; height: 500px;"></div>
+{{isFlipped ? blackplayer : whiteplayer}} {{isFlipped ? blacktimer : whitetimer }}
+</div>
+<button routerLink="/lobby" mat-raised-button class="lobby-button">Lobby</button>
+<button mat-raised-button class="lobby-button" (click)="flipBoard()">Flip Board</button>

@@ -1,0 +1,120 @@
+.card{
+  background-color: #2b2d30;
+  color: #ffffff;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -8px;
+}
+
+.list-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between ;
+  align-items: center;
+  text-align: center;
+}
+
+.table-container{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mat-elevation-z8{
+  margin-right: 30px;
+  background-color: #2b2d30;
+  color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card p {
+  color: #ffffff;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: smaller;
+}
+
+.add-button{
+  background-color: #3b3d41;
+  color: #ffffff;
+  margin-left: 10px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 23px;
+}
+
+.delete-friend-button{
+  width: fit-content;
+  justify-content: right;
+  color: #ffffff;
+  background-color: #3b3d41;
+  margin-left: -35px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.friend-button{
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.add-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.toLobby{
+  display: flex;
+  justify-content: right;
+}
+
+.Lobby{
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Lobby:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.friend-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.delete-friend-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+/*<div class="header">
+                   friend list
+</div>
+<div class="friendadd">
+<button type="submit">
+                     +
+</button>
+<input type="text" [(ngModel)]="user"
+class="friendadd"
+name="friendadd"
+id="friendadd"
+placeholder="add friend">
+</div>
+<div class="dropdown">
+<select>
+<option value="public"> Public </option>
+<option value="private"> Private </option>
+</select>
+</div>
+</mat-card>
+<mat-card class="test">
+<div class="divide">
+</div>*/
+

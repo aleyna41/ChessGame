@@ -1,0 +1,159 @@
+.card{
+  box-shadow: none;
+  border: none;
+  background-color: #2b2d30;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-container {
+  display: grid;
+  grid-template-rows: auto 120px auto;
+  height: 498px;
+  width: 160px;
+  border-radius: 4px;
+  background-color: #3b3d41;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+.top-text-container,
+.bottom-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #2b2d30;
+  border-radius: 4px;
+  color: #ffffff;
+  width: 130px;
+  margin-left: 5px;
+}
+
+.top-text-container {
+  align-self: start;
+  margin-top: 10px;
+}
+
+.bottom-text-container {
+  align-self: end;
+  margin-bottom: 10px;
+}
+
+.flip-button {
+  margin-left: 15px;
+  min-width: 130px;
+}
+
+.player-info {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background-color: #2b2d30;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.table-header {
+  border: 3px solid #2b2d30;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #3b3d41;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+}
+
+.senin{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.example-button-row{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mat-icon {
+  margin: 0; /* Fixt dass die Icons immer zu weit links sind */
+  font-weight: 600;
+}
+
+.button1{
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  min-width: 100px;
+  margin-left: 3px;
+}
+
+.button2{
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  margin-left: 40px;
+  min-width: 100px;
+}
+
+.lobby{
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: -82px;
+  min-width: 79px;
+}
+
+.back{
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: -88px;
+  min-width: 79px;
+}
+
+.flip-button{
+  background-color: #2b2d30;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 45px;
+  margin-right: 30px;
+}
+
+.button1:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.button2:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.lobby:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.back:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.flip-button:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}

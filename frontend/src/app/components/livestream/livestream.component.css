@@ -1,0 +1,13 @@
+.outer{
+  color:white;
+}
+
+.lobby-button{
+  color: #ffffff;
+  background-color: #3b3d41;
+  margin-right:5px;
+}
+.lobby-button:hover{
+  color: #0FB27C;
+  background-color: #eeeeee;
+}

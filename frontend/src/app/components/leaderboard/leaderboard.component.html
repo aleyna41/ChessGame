@@ -1,0 +1,28 @@
+<mat-card class="card">
+  <mat-card-content>
+    <table class="mat-elevation-z8">
+      <thead>
+      <tr>
+        <th> Top Players </th>
+        <th> Elo </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of players; let i = index">
+        <td>
+          <button mat-button class="player-button" (click)="gotoPlayer(i)">
+            {{i + 1}}.{{item.username}}
+          </button> </td>
+
+        <td>
+
+            {{item.points}}
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="lobby-button-container">
+      <a routerLink="/lobby" mat-raised-button class="lobby-button">Lobby</a>
+    </div>
+  </mat-card-content>
+</mat-card>

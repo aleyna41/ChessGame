@@ -1,0 +1,53 @@
+.head {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -8px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    background-color: #2b2d30;
+    width: fit-content;
+    align-items: center;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.example-form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card p {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.submit {
+    background-color: #3b3d41;
+    color: #ffffff;
+    margin-top: -5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cancel {
+    background-color: #3b3d41;
+    color: #ffffff;
+    margin-top: -5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 50px;
+}
+
+.submit:hover {
+    background-color: #eeeeee;
+    color: #0FB27C;
+}
+
+.cancel:hover {
+    background-color: #eeeeee;
+    color: #0FB27C;
+}

@@ -1,0 +1,68 @@
+
+ <mat-card class="card">
+   <mat-card-header class="head">
+     <h2>Friendlist and Requests!</h2>
+   </mat-card-header>
+  <mat-card-content>
+    <div class="table-container">
+      <table class="mat-elevation-z8">
+        <thead>
+        <tr>
+          <th class="list-header"> Your Friendlist! <br>
+            <p>
+              {{ isPrivate === false ? 'Your friendlist is visible in your profile!' : 'Your friendlist won&rsquo;t appear in your profile!' }}
+            </p>
+            <mat-radio-group aria-label="Select an option" (change)="onRadioChange($event)" [value]="isPrivate ? 'private' : 'public'">
+              <mat-radio-button value="public">public</mat-radio-button>
+              <mat-radio-button value="private">private</mat-radio-button>
+            </mat-radio-group>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of friends; let i = index">
+          <td>
+            <button mat-raised-button class="friend-button" (click)="gotoFriend(i)"> {{item}} </button>
+          <!--  <a [routerLink]="['/profile', item]" mat-raised-button class="profilebutton">
+              {{item}}
+            </a> <mat-divider></mat-divider> --></td>
+          <td>
+            <button mat-raised-button class = "delete-friend-button" (click)="deleteFriend(i)">
+              <mat-icon>delete_outline</mat-icon>
+          </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <form [formGroup]="addFriendForm">
+      <mat-form-field class="l">
+        <mat-label>Add a friend!</mat-label>
+        <input matInput formControlName="friendInput"/>
+      </mat-form-field>
+      </form>
+      <button mat-raised-button class="add-button" (click)="sendFriendRequest()"> + </button>
+    </div>
+  <table class="mat-elevation-z8-2">
+    <thead>
+    <tr>
+      <th> Your friend requests</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of friendrequests; let i = index">
+      <td> {{item}} <mat-divider></mat-divider></td>
+      <td>
+        <button mat-raised-button (click)="acceptFriendRequest(i)"> + </button>
+      </td>
+      <td>
+        <button mat-raised-button (click)="denyFriendRequest(i)"> - </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+    <div class="toLobby">
+    <a routerLink="/lobby" mat-raised-button class="Lobby">Lobby</a>
+    </div>
+  </mat-card-content>
+</mat-card>
+

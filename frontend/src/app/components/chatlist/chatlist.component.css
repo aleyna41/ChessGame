@@ -1,0 +1,211 @@
+.card{
+  box-shadow: none;
+  border: none;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background-color: #2b2d30;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+.table-header {
+  border: 3px solid #2b2d30;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #3b3d41;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #2b2d30;
+}
+
+.button-container button {
+  width: fit-content; /* Breite der Buttons an den Inhalt anpassen */
+  color: #ffffff;
+  background-color: #3b3d41;
+  margin-right: 20px; /* Ändere den rechten Abstand nach Bedarf */
+}
+
+.table-container button.chat-button {
+  width: 175px;
+  color: #ffffff;
+  background-color: #3b3d41;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.table-container button.delete-button {
+  width: fit-content;
+  justify-content: right;
+  margin-left: 0px;
+  margin-right: 0px;
+  color: #ffffff;
+  background-color: #3b3d41;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.table-container button.info-button {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: fit-content;
+  margin-left: 0px;
+  margin-right: 0px;
+  color: #ffffff;
+  background-color: #3b3d41;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mat-elevation-z8 {
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.table-container .lobby-button {
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.table-container button.group-button {
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.table-container button.chat-button {
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background-color: #2b2d30;
+  width: 400px;
+}
+
+
+/* Modal stuff */
+
+.modal-container {
+  width: 360px;
+  padding: 20px;
+  background-color: #2b2d30;
+  color: #ffffff;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-back-button {
+  background-color: #3b3d41;
+  color: #ffffff;
+
+  margin-right: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-submit-button {
+  background-color: #3b3d41;
+  color: #ffffff;
+  margin-left: 57px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-friend-button {
+  background-color: #3b3d41;
+  color: #ffffff;
+  margin-left: 26px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-submit2-button {
+  background-color: #3b3d41;
+  color: #ffffff;
+  margin-left: 53px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.deleteFriend-button {
+  color: #ffffff;
+  margin-left: 15px;
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+.deleteFriend-button mat-icon {
+  font-size: medium;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-submit2-button:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.modal-friend-button:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.modal-submit-button:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.modal-back-button:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.table-container button.info-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.table-container button.chat-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.table-container button.delete-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.table-container .lobby-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.table-container button.group-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.table-container button.chat-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}

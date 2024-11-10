@@ -1,0 +1,73 @@
+/*input, label{
+  display: flex;
+  flex-direction: column;
+}
+.textbox{
+  margin-left: 39%;
+  margin-top: 10%;
+}
+input{
+  height: 25px;
+  width: 20%;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+button{
+  height: 75px;
+  width: 275px;
+  border-radius: 10px;
+  margin-left: 38%;
+  margin-top: 20px;
+  font-size: 55px;
+}
+*/
+.head{
+    border: 3px solid #2b2d30;
+    border-radius: 6px;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    align-self: center;
+    height: 30px;
+    width: 420px;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    background-color: #2b2d30;
+    width: 475px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.submit {
+    background-color: #3b3d41;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cancel {
+    background-color: #3b3d41;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #eeeeee;
+    color: #0FB27C;
+}
+
+.cancel:hover {
+    background-color: #eeeeee;
+    color: #0FB27C;
+}
+

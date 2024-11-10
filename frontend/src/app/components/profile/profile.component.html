@@ -1,0 +1,109 @@
+<mat-card>
+  <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+    <div class="card p-4">
+      <div class="image d-flex flex-column justify-content-center align-items-center">
+        <img id="imageEle" height="100" width="100" src="{{profilePicture}}" alt=""/>
+        <br>
+        <span class="name mt-3">{{user.firstName + ' ' + user.lastName + ' '}}</span>
+        <span class="username">{{friendPointer}}</span>
+        <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+          <span class="number">{{user.points}} <span class="elo">ELO</span></span>
+          <span class="anerkennung">{{anerkennung[0]}}</span>
+        </div>
+
+        <table class="mat-elevation-z8">
+          <thead>
+          <tr>
+            <th>Friends:</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of friends; let i = index" class="friends">
+            <td> {{item}} <mat-divider></mat-divider></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="mat-elevation-z8">
+          <thead>
+          <tr>
+            <th>Chessclubs:</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of myChessClubs; let i = index" class="clubs">
+            <td> {{item}} <mat-divider></mat-divider></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="mat-elevation-z8">
+          <thead>
+          <tr>
+            <th colspan="2">Gamehistory:</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of gameHistory; let i = index" class="history" (click)="openModal(template)">
+
+            <ng-template #template class="modal-container">
+              <div class="modal-container">
+                <div class="modal-header">
+                  <div class="modal-header-left">
+                    <h2>{{item.white}}</h2>
+                    <p>{{whitePoints(item)}} pt</p>
+                  </div>
+                  <div class="modal-header-center">
+                    <h2>vs.</h2>
+                  </div>
+                  <div class="modal-header-right">
+                    <h2>{{item.black}}</h2>
+                    <p>{{blackPoints(item)}} pt</p>
+                  </div>
+                </div>
+                <div class="modal-content">
+                  <div class="content-row">
+                    <div class="result-info">
+                      <h2>Result: {{item.result}}</h2>
+                    </div>
+                    <div class="date-info">
+                      <p>{{item.date | date:'HH:mm'}} - {{item.date | date:'dd.MM.yyyy'}}</p>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button mat-raised-button class="export-button" title="Export as PGN" (click)="exportPgn(item.gameId)">
+                      <mat-icon>arrow_upward</mat-icon>
+                    </button>
+                    <button mat-raised-button class="repeat" title="Repeat game" (click)="repeatGame(item)">
+                      <mat-icon>history</mat-icon>
+                    </button>
+                    <button mat-raised-button class="modal-back-button" (click)="closeModal()">Back</button>
+                  </div>
+                </div>
+              </div>
+              </ng-template>
+
+            <td>{{item.white}} vs. {{item.black}}</td>
+            <td>&nbsp;&nbsp;&nbsp;&nbsp;{{item.result}}</td>
+            <mat-divider></mat-divider>
+          </tr>
+          </tbody>
+        </table>
+
+        <ng-container *ngIf="loggedUser === friendPointer">
+          <form id="uploadForm" enctype="multipart/form-data" class="profilePicForm">
+            <label for="image">Choose a picture:</label>
+            <input type="file" name="image" id="image" accept="image/*">
+          </form>
+          <button mat-raised-button class= "setProfilepic" (click)="setProfilePicture()">Set Profilepicture </button>
+          <button routerLink="/lobby" mat-raised-button class="lobby-button">Lobby</button>
+        </ng-container>
+
+        <ng-container class="ng-container" *ngIf="loggedUser !== friendPointer">
+          <button routerLink="/lobby" mat-raised-button class="friend-lobby-button">Lobby</button>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</mat-card>
+

@@ -1,0 +1,50 @@
+<div id="outer" style="color:white">
+{{player2}} {{timer2}}
+<div id="board" style="width: 500px; height: 500px;"></div>
+{{player1}} {{timer1}}
+</div>
+<mat-divider></mat-divider>
+<div class="senin">
+  <div class="example-button-row">
+    <button mat-raised-button class="button" routerLink="/lobby">Lobby</button>
+  </div>
+
+  <div class="example-button-row">
+    <button mat-raised-button class="button" (click)="surrender()">Surrender</button>
+  </div>
+
+  <div class="example-button-row">
+    <button mat-raised-button class="button" (click)="sendDrawRequest()">Remis</button>
+  </div>
+  <div class="example-button-row">
+    <button mat-raised-button class="button" (click)="startLivestream()">Start Livestream</button>
+  </div>
+  <div class="example-button-row">
+    <button mat-raised-button class="button" (click)="assist()">Help</button>
+  </div>
+  <div id="draw" style="color:white">
+  <table  class="mat-elevation-z8" >
+    <th>accept Draw?</th>
+    <tbody>
+    <tr>
+      <button mat-button class="accept" (click)="acceptDrawRequest()" style="color:white">+</button>
+      <mat-divider></mat-divider>
+      <td>
+        <button mat-button class="reject" (click)="denyDrawRequest()" style="color:white">-</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

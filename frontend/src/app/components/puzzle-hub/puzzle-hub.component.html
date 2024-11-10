@@ -1,0 +1,25 @@
+<!--<div id="boards" width="800" height="800"> </div> -->
+<div class="card">
+<table class="mat-elevation-z8">
+  <thead class="header">
+  <tr>
+    <th> Puzzle-Hub </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let theme of themes; let i = index">
+    <td>
+      <button mat-button class="button" (click)="gotoPuzzle(i)">
+        {{theme}}
+      </button> </td>
+  </tr>
+  </tbody>
+</table>
+  <div class="button-container">
+    <form class="form" action="/dein-endpunkt" method="post" enctype="multipart/form-data">
+      <input type="file" name="csvFile" id="csv" accept=".csv" class="choose"/>
+      <input type="submit" value="Upload file" class="upload" (click)="setChessPuzzleData()"/>
+      <button routerLink="/lobby" mat-raised-button class="lobby-button">Lobby</button>
+    </form>
+  </div>
+</div>

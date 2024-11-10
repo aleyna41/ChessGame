@@ -1,0 +1,39 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
+</style>
+<mat-card class="card">
+    <mat-card-content>
+        <div class="container">
+            <div #confettiContainer class="confetti-container"></div>
+            <div class="draw">
+            <img
+                    src="assets/Icons/laurel-wreath_4550472.png"
+                    alt="Draw Image"
+                    class="draw-image"
+                    height="100"
+                    width="100"
+                    (mouseover)="triggerConfetti($event)"
+            />
+                <h2>DRAW</h2>
+            </div>
+            <div class="white-name">
+                <h2>{{whiteName}}</h2>
+            </div>
+            <div class="point-container">
+                <span class="points">ELO: {{eloWhitePoints}}pt.</span>
+                <span class="bonus">&plusmn; 0</span>
+            </div>
+            <span class="vs">-</span>
+            <div class="black-name">
+                <h2>{{blackName}}</h2>
+            </div>
+            <div class="point-container">
+                <span class="points">ELO: {{eloBlackPoints}}pt.</span>
+                <span class="bonus">&plusmn; 0</span>
+            </div>
+            <div class="lobby-container">
+                <button mat-raised-button class="lobby" routerLink="/lobby">Lobby</button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

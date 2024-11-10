@@ -1,0 +1,40 @@
+.lobby-button{
+    background-color: #3b3d41;
+    color: #ffffff;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.lobby-button:hover{
+    background-color: #eeeeee;
+    color: #0FB27C;
+}
+
+.lobby-button-container{
+    text-align: right;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: #2b2d30;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.1);
+    color:#ffffff;
+}
+
+.player-button{
+    background-color: #3b3d41;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.player-button:hover{
+    background-color: #eeeeee;
+    color: #0FB27C;
+}
+
+th{
+    font-size: 20px;
+    padding-bottom: 10px;
+}

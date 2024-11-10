@@ -1,0 +1,117 @@
+.chat-container {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  color: #eeeeee;
+}
+
+.message-container {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #3b3d41;
+  background-color: #3b3d41;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  margin-bottom: 10px;
+  color: #eeeeee;
+}
+
+.sender {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.mat-form-field {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.back-button {
+  justify-content: right;
+  background-color: #3b3d41;
+  color: #eeeeee;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.send-button {
+  margin-bottom: 3px;
+  background-color: #3b3d41;
+  color: #eeeeee;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.seen-text {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 5px;
+}
+
+.edit-button {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.edit-submit {
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+textarea {
+  width: fit-content;
+  padding: 5px;
+  border: 1px solid #2b2d30;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 -4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: #2b2d30;
+  color: #0FB27C;
+}
+
+.edit-button:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-submit:hover {
+  background-color: #eeeeee;
+  color: #0FB27C;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.send-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}

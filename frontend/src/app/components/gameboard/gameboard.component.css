@@ -1,0 +1,23 @@
+.senin{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.example-button-row{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button{
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+.button:hover{
+  background-color: #ffffff;
+  color: #0FB27C;
+}
+

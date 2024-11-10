@@ -1,0 +1,203 @@
+<mat-drawer-container class="example-container">
+  <mat-drawer class="sidebar" mode="side" opened>
+    <h6 class="heading">My profile:</h6>
+    <div class="profile">
+      <a [routerLink]="['/profile', loggedUser]" mat-raised-button class="profilebutton">
+    <span class="profile-content">
+      <img class="profile-picture" src="assets/ProfilePictures/defaultprofilepicture.png" alt="argggg" height="40" width="40">
+      <span class="user">{{loggedUser}}</span>
+    </span>
+      </a>
+    </div>
+   <!-- <div class="buttons">
+      Play With friends or opponent:
+      <br>
+      <mat-form-field class="example-full-width">
+
+        <mat-label>username</mat-label>
+        <input matInput formControlName="" />
+
+
+
+      </mat-form-field>
+
+      -->
+    <h6 class="heading">Create a game:</h6>
+  <div class="create-game">
+    <form class="example-form" [formGroup]="gameform" (ngSubmit)="createGame()">
+      <div class="input-wrapper">
+        <input matInput formControlName="username" (input)="handleInput($event)" />
+        <label #usernameLabel class="label">Your friends' name:</label>
+        <div class="underline"></div>
+      </div>
+    <br>
+      <div class="input-wrapper">
+        <input matInput formControlName="gamename" (input)="handleInput($event)"/>
+        <label #gamenameLabel class="label">Name your game:</label>
+        <div class="underline"></div>
+      </div>
+    <br>
+      <div class="input-wrapper">
+        <mat-label>Select timer: </mat-label>
+        <select matNativeControl required (change)="onTimeSelected($event)">
+          <option [value]="3">3</option>
+          <option [value]="5">5</option>
+          <option [value]="10">10</option>
+          <option [value]="15">15</option>
+        </select>
+        <button mat-raised-button class="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+    <h6 class="heading">Game-Requests:</h6>
+    <div class="table-container">
+      <table class="mat-elevation-z8">
+        <tbody>
+        <tr *ngFor="let item of gameInvites; let i = index">
+          <td> {{item}} <mat-divider></mat-divider></td>
+          <td>
+            <button mat-button class="accept" (click)="acceptInvite(i)">+</button>
+            <mat-divider></mat-divider>
+          </td>
+          <td>
+            <button mat-button class="reject" (click)="denyInvite(i)">-</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h6 class="heading">My Games:</h6>
+    <div class="table-container">
+    <table class="mat-elevation-z8">
+      <tbody>
+      <tr *ngFor="let item of myGames; let i = index">
+        <td> {{item}} <mat-divider></mat-divider></td>
+        <td>
+          <button mat-raised-button class="join" (click)="openGame(i)"> Join </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+
+  </mat-drawer>
+  <mat-drawer-content>
+
+
+    <body class="body">
+    <div class="router">
+      <a (click)="openDialog(template)">
+      <div class="card">
+        <img src="assets/Icons/bot_13481687.png" alt="">
+        <div class="content">
+          <h4 class="title">Play against the Computer</h4>
+        </div>
+      </div>
+      </a>
+      <a href="/friendlist">
+      <div class="card">
+        <img src="assets/Icons/followers_2097654.png" alt="">
+        <div class="content">
+          <h4 class="title">Friendlist</h4>
+        </div>
+      </div>
+      </a>
+      <a href="/chessclub">
+      <div class="card">
+        <img src="assets/Icons/knowledge_3402093.png" alt="">
+        <div class="content">
+          <h4 class="title">Chessclub</h4>
+        </div>
+      </div>
+      </a>
+      <a href="/leaderboard">
+      <div class="card">
+        <img src="assets/Icons/chess_3402064.png" alt="">
+        <div class="content">
+          <h4 class="title">Leaderboard</h4>
+        </div>
+      </div>
+      </a>
+    </div>
+
+    <div class="router">
+      <a href="/puzzle-hub">
+      <div class="card">
+        <img src="assets/Icons/puzzle_2210332.png" alt="">
+        <div class="content">
+          <h4 class="title">Puzzlehub</h4>
+        </div>
+      </div>
+      </a>
+      <a href="/chatlist">
+      <div class="card">
+        <img src="assets/Icons/online-chat_5320806.png" alt="">
+        <div class="content">
+          <h4 class="title">Chat</h4>
+        </div>
+      </div>
+      </a>
+      <a href="/streamlist">
+      <div class="card">
+        <img src="assets/Icons/live_9900150.png" alt="">
+        <div class="content">
+          <h4 class="title">Livestreams</h4>
+        </div>
+      </div>
+      </a>
+      <a href="/exp-imp">
+      <div class="card">
+        <img src="assets/Icons/upload_7436263.png" alt="">
+        <div class="content">
+          <h4 class="title">Export/Import</h4>
+        </div>
+      </div>
+      </a>
+    </div>
+    </body>
+    <footer class="footer">
+      <p>
+        Designed by <a href="https://www.freepik.com/" target="_blank">Freepik</a>
+      </p>
+    </footer>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+
+<ng-template #template>
+  <div class="modal-container">
+    <div class="modal-header">
+      <h2>Choose difficulty</h2>
+      <button mat-raised-button class="modal-back-button" (click)="goBack()">Cancel</button>
+    </div>
+
+    <div class="modal-content" [formGroup]="botgameform">
+        <mat-radio-group aria-label="Select an option" (change)="onRadioChange($event)" [value]=difficulty>
+          <mat-radio-button value="1">easy</mat-radio-button>
+          <mat-radio-button value="2">medium</mat-radio-button>
+          <mat-radio-button value="3">hard</mat-radio-button>
+        </mat-radio-group>
+
+      <div class="input-wrapper">
+        <mat-label>Select timer: </mat-label>
+        <select matNativeControl required (change)="onTimeSelected($event)">
+          <option [value]="3">3</option>
+          <option [value]="5">5</option>
+          <option [value]="10">10</option>
+          <option [value]="15">15</option>
+        </select>
+      </div>
+      <div class ="submit-container">
+        <div class="input-wrapper">
+          <input matInput formControlName="botgamename" (input)="handleInput($event)"/>
+          <label #gamenameLabel class="label">Name your Bot-Game:</label>
+          <div class="underline"></div>
+        </div>      <button mat-raised-button class="modal-submit-button" (click)="createBotGame()">Create game</button>
+      </div>
+      </div>
+  </div>
+</ng-template>
+
+

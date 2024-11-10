@@ -1,0 +1,115 @@
+<mat-card class="card">
+  <mat-card-content>
+    <div class="table-container">
+      <table class="mat-elevation-z8">
+        <thead>
+        <tr>
+          <th colspan="3" class="table-header">Chats</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let chat of chats; let i = index">
+          <td>
+            <button mat-button class = "chat-button" (click)="goToChat(i)">
+             {{chat}}
+            </button>
+            <mat-divider></mat-divider>
+          </td>
+          <td>
+            <button mat-raised-button class = "delete-button" (click)="deleteChat(i)">
+              <mat-icon>delete_outline</mat-icon>
+            </button>
+          </td>
+          <td>
+            <button mat-raised-button class = "info-button" (click)="openChatInfoModal(chatInfoTemplate)">
+
+              <ng-template #chatInfoTemplate>
+                <div class="modal-container">
+                  <div class="modal-header">
+                    <h2>Chat-Info: {{chatType[i]}}</h2>
+                    <button mat-raised-button class="modal-back-button" (click)="goBack()">Cancel</button>
+                  </div>
+
+                  <div class="modal-content">
+                    <ng-container *ngIf="chatType[i] === 'private'; else groupInfo">
+                      <p>Friend-Username: {{ chatInfo[i].friendName }}</p>
+                      <p>Creation Date: {{chatInfo[i].creationDate | date:'dd.MM.yyyy'}} {{chatInfo[i].creationDate | date:'HH:mm'}}</p>
+                    </ng-container>
+                    <ng-template #groupInfo>
+                      <p>Groupname: {{ chatInfo[i].friendName }}</p>
+                      <p>Creation Date: {{chatInfo[i].creationDate | date:'dd.MM.yyyy'}} {{chatInfo[i].creationDate | date:'HH:mm'}}</p>
+                      <p>Members: {{ chatInfo[i].memberUsernames.join(', ') }}</p>
+                    </ng-template>
+                    </div>
+                </div>
+              </ng-template>
+
+              <mat-icon>info</mat-icon>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="button-container">
+        <button mat-raised-button class = "chat-button" (click)="openFriendSelectionModal(template)">New chat</button>
+
+        <ng-template #template>
+          <div class="modal-container">
+            <div class="modal-header">
+              <h2>Create a new private-chat!</h2>
+              <button mat-raised-button class="modal-back-button" (click)="goBack()">Cancel</button>
+            </div>
+
+            <div class="modal-content">
+              <mat-form-field>
+                <input matInput placeholder="Your friends' name" [(ngModel)]="this.friendName">
+              </mat-form-field>
+
+              <button mat-raised-button class="modal-submit-button" (click)="createChat()">Submit</button>
+            </div>
+          </div>
+        </ng-template>
+
+        <button mat-raised-button class = "group-button" (click)="openGroupSelectionModal(groupTemplate)">New groupchat</button>
+        <ng-template #groupTemplate>
+          <div class="modal-container">
+            <div class="modal-header">
+              <h2>Create a new group-chat</h2>
+              <button mat-raised-button class="modal-back-button" (click)="goBack()">Cancel</button>
+            </div>
+
+            <div class="modal-content">
+              <!-- Eingabefeld für Benutzernamen -->
+              <mat-form-field>
+                <input matInput placeholder="Your friends' name!" [(ngModel)]="selectedName">
+              </mat-form-field>
+
+              <button mat-raised-button class="modal-friend-button" (click)="addSelectedFriend()">Add Friend</button>
+
+              <mat-form-field>
+                <input matInput placeholder="Name your group!" [(ngModel)]="groupName">
+              </mat-form-field>
+
+              <button mat-raised-button class="modal-submit2-button" (click)="createGroupChat()">Submit</button>
+
+              <div *ngIf="selectedFriends.length > 0">
+                <p>Selected Friends:</p>
+                <ul>
+                  <li *ngFor="let friend of selectedFriends; let i = index">
+                    {{ friend }} <button mat-mini-fab class = "deleteFriend-button" (click)="removeSelectedFriend(i)"><mat-icon>close</mat-icon></button>
+                  </li>
+                </ul>
+              </div>
+
+               </div>
+          </div>
+        </ng-template>
+
+
+        <div class="lobby-button-container">
+          <a routerLink="/lobby" mat-raised-button class="lobby-button">Lobby</a>
+        </div>      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+

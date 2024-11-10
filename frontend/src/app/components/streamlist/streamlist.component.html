@@ -1,0 +1,26 @@
+<mat-card class="card">
+  <mat-card-content>
+    <div class="table-container">
+      <table class="mat-elevation-z8">
+        <thead>
+        <tr>
+          <th colspan="3" class="table-header">Livestreams</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let game of games; let i = index">
+          <td>
+            <button mat-button class = "game-button" (click)="goToGameStream(i)">
+              {{game}}
+            </button>
+            <mat-divider></mat-divider>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+        <div class="lobby-button-container">
+          <a routerLink="/lobby" mat-raised-button class="lobby-button">Lobby</a>
+        </div>      </div>
+  </mat-card-content>
+</mat-card>
+

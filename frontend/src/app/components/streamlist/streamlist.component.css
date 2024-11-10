@@ -1,0 +1,86 @@
+.card{
+  box-shadow: none;
+  border: none;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background-color: #2b2d30;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  border: 3px solid #2b2d30;
+  border-radius: 6px;
+  padding: 10px;
+  background-color: #3b3d41;
+  color: #ffffff;
+  text-align: center;
+  font-size: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #2b2d30;
+}
+
+.button-container button {
+  width: fit-content;
+  color: #ffffff;
+  background-color: #3b3d41;
+  margin-right: 20px;
+}
+
+.table-container button.game-button {
+  width: 175px;
+  color: #ffffff;
+  background-color: #3b3d41;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.mat-elevation-z8 {
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.table-container .lobby-button {
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: flex-end;
+}
+
+.table-container button.game-button {
+  background-color: #3b3d41;
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card {
+  background-color: #2b2d30;
+  width: 400px;
+}
+
+.lobby-button-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1px;
+}
+
+.table-container button.game-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+
+.table-container .lobby-button:hover{
+  background-color: #eeeeee;
+  color: #0FB27C;
+}
+

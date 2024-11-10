@@ -1,0 +1,34 @@
+<div class="chat-container">
+  <div class="header">
+    <button mat-raised-button class = "back-button" routerLink="/chessclub">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span>{{ clubName }}</span>
+  </div>
+
+  <div class="message-container">
+    <div *ngFor="let message of chatHistory" class="message">
+        <span class="content">
+          <span [style.color]="message.senderColor">{{ message.sender }}:
+          </span>
+          <span [style.color]="message.contentColor">{{ message.content }}</span>
+
+           <ng-container
+             *ngIf="editingMessage === message;">
+          <textarea [(ngModel)]="editingMessage.content"></textarea>
+           <span class="edit-submit" (click)="submitEdit()">submit</span>
+        </ng-container>
+
+      </span>
+      <span *ngIf="message.seen && message.sender === loggedUser" class="seen-text">seen</span>
+      <span *ngIf="!message.seen && message.sender === loggedUser && editingMessage !== message" class="edit-button" (click)="editMessage(message)">edit</span>
+    </div>
+  </div>
+
+  <div class="input-container">
+    <mat-form-field class="mat-form-field">
+      <input matInput placeholder="Send a message" [(ngModel)]="newMessage" />
+    </mat-form-field>
+    <button mat-raised-button class="send-button" (click)="sendClubMessage()">send</button>
+  </div>
+</div>

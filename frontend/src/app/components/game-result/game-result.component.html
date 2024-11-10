@@ -1,0 +1,33 @@
+<mat-card class="card">
+    <mat-card-content>
+        <div class="container">
+            <div #confettiContainer class="confetti-container"></div>
+            <img
+                    src="assets/Icons/winner_3508754.png"
+                    alt="Winner Image"
+                    class="winner-image"
+                    height="100"
+                    width="100"
+                    (mouseover)="triggerConfetti($event)"
+            />
+            <div class="winner-name">
+                <h2>{{winnerName}}</h2>
+            </div>
+            <div class="point-container">
+              <span class="points">ELO: {{eloWinnerPoints}}pt.</span>
+              <span class="bonus">+10</span>
+            </div>
+          <span class="vs">-</span>
+            <div class="looser-name">
+                <h2>{{looserName}}</h2>
+            </div>
+            <div class="point-container">
+              <span class="points">ELO: {{eloLooserPoints}}pt.</span>
+              <span class="bonus">-10</span>
+            </div>
+            <div class="lobby-container">
+                <button mat-raised-button class="lobby" routerLink="/lobby">Lobby</button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
